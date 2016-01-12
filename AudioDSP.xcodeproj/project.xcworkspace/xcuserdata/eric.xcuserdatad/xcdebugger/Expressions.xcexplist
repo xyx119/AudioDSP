@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ViewController clickedStartButton:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.btnRun.titleLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate fillBuffer:]:AppDelegate.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "pdata[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

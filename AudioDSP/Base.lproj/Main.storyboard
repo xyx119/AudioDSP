@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IP Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZ5-Jf-tLq">
+                                <rect key="frame" x="145" y="52" width="298" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQA-aL-d7x">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="clickedStartButton:" destination="BYZ-38-t0r" eventType="touchDown" id="Tgh-Av-LZK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local IP Address: 127.0.0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiE-WW-Pwg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="181" width="540" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JZ5-Jf-tLq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="131" id="1n1-0x-d6r">
+                                <variation key="heightClass=regular" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="JZ5-Jf-tLq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="Q8W-uB-fdT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SQA-aL-d7x" secondAttribute="trailing" constant="20" id="dcf-b0-HaB"/>
+                            <constraint firstItem="SQA-aL-d7x" firstAttribute="top" secondItem="JZ5-Jf-tLq" secondAttribute="bottom" constant="21" id="kp3-Ld-8Nb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JZ5-Jf-tLq" secondAttribute="trailing" constant="131" id="yWm-AO-JPA">
+                                <variation key="heightClass=regular" constant="20"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="SQA-aL-d7x"/>
+                                <exclude reference="kiE-WW-Pwg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="dcf-b0-HaB"/>
+                                <exclude reference="kp3-Ld-8Nb"/>
+                                <exclude reference="1n1-0x-d6r"/>
+                                <exclude reference="Q8W-uB-fdT"/>
+                                <exclude reference="yWm-AO-JPA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="SQA-aL-d7x"/>
+                                <include reference="kiE-WW-Pwg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="dcf-b0-HaB"/>
+                                <include reference="kp3-Ld-8Nb"/>
+                                <include reference="1n1-0x-d6r"/>
+                                <include reference="Q8W-uB-fdT"/>
+                                <include reference="yWm-AO-JPA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnRun" destination="SQA-aL-d7x" id="G70-3L-GZx"/>
+                        <outlet property="lbLocalIPAddress" destination="kiE-WW-Pwg" id="cTb-9v-hG1"/>
+                        <outlet property="tfIPAddress" destination="JZ5-Jf-tLq" id="kVx-Rg-gW6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="408.75"/>
+        </scene>
+    </scenes>
+</document>
