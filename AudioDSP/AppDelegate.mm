@@ -35,8 +35,8 @@
 - (id) init{
     if (self = [super init]){
         
-        _playerBuffer       = new RingBuffer<UInt16>(160*50*5);
-        _echoBuffer         = new RingBuffer<UInt16>(160*50);
+        _playerBuffer       = new RingBuffer<UInt16>(160*50*3);
+        _echoBuffer         = new RingBuffer<UInt16>(160*25);
         _audioDSP           = [[AudioDSP alloc] init];
         
         _recorder           = [[AudioStreamRecorder alloc] init];

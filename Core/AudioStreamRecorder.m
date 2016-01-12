@@ -74,6 +74,10 @@ static void AudioInputCallback(void * inUserData,  // Custom audio metadata
         
         for (int i = 0; i < NUM_BUFFERS; i++) {
             AudioQueueAllocateBuffer(recordState.queue, bufersize, &recordState.buffers[i]);
+            
+            bzero(recordState.buffers[i]->mAudioData, bufersize);
+            recordState.buffers[i]->mAudioDataByteSize = bufersize;
+            
             AudioQueueEnqueueBuffer(recordState.queue, recordState.buffers[i], 0, nil);
         }
         
