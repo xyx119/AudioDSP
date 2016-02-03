@@ -40,10 +40,10 @@
     
     speex_echo_ctl(ses, SPEEX_ECHO_SET_SAMPLING_RATE, &sampleRate);
     
-    int denoise = 1;
-    int noiseSuppress = -5;
-    speex_preprocess_ctl(sps, SPEEX_PREPROCESS_SET_DENOISE, &denoise);// 降噪
-    speex_preprocess_ctl(sps, SPEEX_PREPROCESS_SET_NOISE_SUPPRESS, &noiseSuppress);// 噪音分贝数
+//    int denoise = 1;
+//    int noiseSuppress = -5;
+//    speex_preprocess_ctl(sps, SPEEX_PREPROCESS_SET_DENOISE, &denoise);// 降噪
+//    speex_preprocess_ctl(sps, SPEEX_PREPROCESS_SET_NOISE_SUPPRESS, &noiseSuppress);// 噪音分贝数
     
 //    int agc = 1;
 //    int level = 24000;

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "AudioStreamRecorder.h"
 #import "AudioDSP.h"
+#import <AVFoundation/AVFoundation.h>
+
 #include "RingBuffer.h"
 #include <ifaddrs.h>
 #include <arpa/inet.h>
@@ -36,7 +38,7 @@
     if (self = [super init]){
         
         _playerBuffer       = new RingBuffer<UInt16>(160*50*3);
-        _echoBuffer         = new RingBuffer<UInt16>(160*25);
+        _echoBuffer         = new RingBuffer<UInt16>(160*10);
         _audioDSP           = [[AudioDSP alloc] init];
         
         _recorder           = [[AudioStreamRecorder alloc] init];
@@ -53,7 +55,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
+    
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    
     [self _setupSocket];
     
     return YES;
@@ -91,7 +96,6 @@
         _playerBuffer->empty() ? pdata[i] = 0 : _playerBuffer->pop(pdata[i]);
     }
     
-    NSLog(@"<--- fillBuffer ...");
 }
 
 - (void)feedSamples:(UInt32)audioDataBytesCapacity audioData:(void *)audioData{
@@ -125,8 +129,6 @@
     
     delete[] speakerBuffer;
     delete[] outBuffer;
-    
-    NSLog(@"---> feedSamples ###");
 }
 
 #pragma mark --- UDP socket
@@ -171,7 +173,7 @@ withFilterContext:(id)filterContext
     NSString *host = nil;
     uint16_t port = 0;
     [GCDAsyncUdpSocket getHost:&host port:&port fromAddress:address];
-    NSLog(@"RECV: message from: %@:%hu", host, port);
+//    NSLog(@"RECV: message from: %@:%hu", host, port);
     
     UInt16 count =  [data length] / sizeof(UInt16);
 

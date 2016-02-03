@@ -20,6 +20,7 @@
 		076B37F31C429B5000C9C4DA /* AudioStreamRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 076B37E31C429B5000C9C4DA /* AudioStreamRecorder.m */; };
 		076B37F41C429B5000C9C4DA /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 076B37F01C429B5000C9C4DA /* libspeexdsp.a */; };
 		07967C691C437A9A000F4742 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 07967C681C437A9A000F4742 /* GCDAsyncUdpSocket.m */; };
+		07B59E171C567E1D008A9A0C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B59E161C567E1D008A9A0C /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		076B37F01C429B5000C9C4DA /* libspeexdsp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libspeexdsp.a; sourceTree = "<group>"; };
 		07967C671C437A9A000F4742 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		07967C681C437A9A000F4742 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		07B59E161C567E1D008A9A0C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B59E171C567E1D008A9A0C /* AVFoundation.framework in Frameworks */,
 				076B37F41C429B5000C9C4DA /* libspeexdsp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +107,7 @@
 		076B37891C42443000C9C4DA = {
 			isa = PBXGroup;
 			children = (
+				07B59E161C567E1D008A9A0C /* AVFoundation.framework */,
 				076B37DC1C429B5000C9C4DA /* Core */,
 				076B37941C42443000C9C4DA /* AudioDSP */,
 				076B37AE1C42443000C9C4DA /* AudioDSPTests */,
@@ -504,7 +508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiang.jc@gmail.com (2MUK59K5PS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AudioDSP/Info.plist;
@@ -525,7 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiang.jc@gmail.com (2MUK59K5PS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AudioDSP/Info.plist;

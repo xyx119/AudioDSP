@@ -13,7 +13,7 @@
 
 #define DSP_SAMPLING_RATE       8000
 #define DSP_FRAME_SIZE          160         //PCM Frame Size
-#define DSP_FRAME_TAIL          16000*0.2
+#define DSP_FRAME_TAIL          16000*0.3
 
 @interface AudioDSP : NSObject
 
